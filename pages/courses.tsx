@@ -372,7 +372,7 @@ export default function Courses() {
               </motion.div>
             </Link>
           ))}
-          {account ? (
+          {/* {account ? ( */}
             <motion.div
               style={{
                 background: "linear-gradient(145deg, rgba(19, 10, 42, 0.9), rgba(5, 5, 5, 0.9))",
@@ -399,9 +399,9 @@ export default function Courses() {
               }} />
               {formatAddress(account)}
             </motion.div>
-          ) : (
+          {/* ) : (
             <motion.button
-              onClick={() => buyCourse(courseTitle)}
+              onClick={() => buyCourse(account[courseTitle])}
               disabled={isConnecting}
               style={{
                 backgroundColor: "rgba(124, 58, 237, 0.1)",
@@ -424,7 +424,7 @@ export default function Courses() {
             >
               {isConnecting ? "Connecting..." : "Connect MetaMask"}
             </motion.button>
-          )}
+          )} */}
         </div>
       </nav>
 
