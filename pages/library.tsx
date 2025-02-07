@@ -22,6 +22,8 @@ const OwlLogo = memo(() => (
     </defs>
   </svg>
 ));
+OwlLogo.displayName="OwlLogo";
+
 
 const bookPrice = "0.01"; // Price in ETH
 
@@ -239,6 +241,7 @@ const BookCard = memo(({ book, unlockedBooks, onBuy, bookPrice }: any) => (
     )}
   </m.div>
 ));
+BookCard.displayName="BookCard";
 
 export default function Library() {
   const router = useRouter();
