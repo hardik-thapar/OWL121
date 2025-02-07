@@ -1,4 +1,5 @@
-interface Course {
+
+export interface Course {
   id: string;
   title: string;
   description: string;
@@ -17,7 +18,6 @@ interface Course {
   subtitles:boolean;
   specialFeatures: string[];
 }
-
 export const courses: Course[] = [
   {
     id: "python-ai",

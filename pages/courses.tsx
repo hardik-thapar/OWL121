@@ -335,6 +335,7 @@ export default function Courses() {
   };
 
   const formatAddress = (address: string) => {
+    // console.log(address);
     return `${address.slice(0, 6)}...${address.slice(-4)}`;
   };
 
@@ -372,7 +373,7 @@ export default function Courses() {
               </motion.div>
             </Link>
           ))}
-          {/* {account ? ( */}
+          {account && (
             <motion.div
               style={{
                 background: "linear-gradient(145deg, rgba(19, 10, 42, 0.9), rgba(5, 5, 5, 0.9))",
@@ -398,7 +399,7 @@ export default function Courses() {
                 borderRadius: "50%",
               }} />
               {formatAddress(account)}
-            </motion.div>
+            </motion.div>)}
           {/* ) : (
             <motion.button
               onClick={() => buyCourse(account[courseTitle])}

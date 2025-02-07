@@ -7,9 +7,9 @@ import Image from "next/image";
 import { useRouter } from 'next/router';
 import { ethers } from 'ethers';
 import UserPreferencesModal, { UserPreferences } from '../components/UserPreferencesModal';
-import { getRecommendedCourses, Course } from '../data/recommendedCourses';
-import { courses } from '../data/courses';
-import { Course as CourseType } from '../types/courseTypes';
+// import { Course } from '../data/recommendedCourses';
+import { courses, Course } from '../data/courses';
+
 
 const OwlLogo = () => (
   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: "15px" }}>
@@ -465,6 +465,10 @@ const getRecommendedCourses = (preferences: UserPreferences): Course[] => {
         price: 0.01,
         videoUrl: "",
         ipfsLink: "",
+        certificateTemplate: "",
+        signLanguage: "",
+        specialFeatures: [],
+        subtitles: false,
         videoCID: "",
         isPaid: true,
         duration: "8 hours",
@@ -479,6 +483,10 @@ const getRecommendedCourses = (preferences: UserPreferences): Course[] => {
         description: "Deep dive into cellular structures and molecular mechanisms.",
         price: 0.01,
         videoUrl: "",
+        certificateTemplate: "",
+        signLanguage: "",
+        specialFeatures: [],
+        subtitles: false,
         ipfsLink: "",
         videoCID: "",
         isPaid: true,
@@ -497,6 +505,10 @@ const getRecommendedCourses = (preferences: UserPreferences): Course[] => {
         price: 0.01,
         videoUrl: "",
         ipfsLink: "",
+        certificateTemplate: "",
+        signLanguage: "",
+        specialFeatures: [],
+        subtitles: false,
         videoCID: "",
         isPaid: true,
         duration: "12 hours",
@@ -512,6 +524,10 @@ const getRecommendedCourses = (preferences: UserPreferences): Course[] => {
         price: 0.01,
         videoUrl: "",
         ipfsLink: "",
+        certificateTemplate: "",
+        signLanguage: "",
+        specialFeatures: [],
+        subtitles: false,
         videoCID: "",
         isPaid: true,
         duration: "8 hours",
@@ -529,6 +545,10 @@ const getRecommendedCourses = (preferences: UserPreferences): Course[] => {
         price: 0.01,
         videoUrl: "",
         ipfsLink: "",
+        certificateTemplate: "",
+        signLanguage: "",
+        specialFeatures: [],
+        subtitles: false,
         videoCID: "",
         isPaid: true,
         duration: "6 hours",
@@ -545,6 +565,10 @@ const getRecommendedCourses = (preferences: UserPreferences): Course[] => {
         videoUrl: "",
         ipfsLink: "",
         videoCID: "",
+        certificateTemplate: "",
+        signLanguage: "",
+        specialFeatures: [],
+        subtitles: false,
         isPaid: true,
         duration: "8 hours",
         instructor: "Prof. Green Energy",
@@ -559,6 +583,10 @@ const getRecommendedCourses = (preferences: UserPreferences): Course[] => {
         title: "Blockchain Development",
         description: "Build decentralized applications and smart contracts.",
         price: 0.01,
+        certificateTemplate: "",
+        signLanguage: "",
+        specialFeatures: [],
+        subtitles: false,
         videoUrl: "",
         ipfsLink: "",
         videoCID: "",
@@ -578,6 +606,10 @@ const getRecommendedCourses = (preferences: UserPreferences): Course[] => {
         ipfsLink: "",
         videoCID: "",
         isPaid: true,
+        certificateTemplate: "",
+        signLanguage: "",
+        specialFeatures: [],
+        subtitles: false,
         duration: "8 hours",
         instructor: "Prof. DeFi Expert",
         category: "Technology",
@@ -592,6 +624,10 @@ const getRecommendedCourses = (preferences: UserPreferences): Course[] => {
         description: "Develop essential leadership skills and emotional intelligence.",
         price: 0.01,
         videoUrl: "",
+        certificateTemplate: "",
+        signLanguage: "",
+        specialFeatures: [],
+        subtitles: false,
         ipfsLink: "",
         videoCID: "",
         isPaid: true,
@@ -609,6 +645,10 @@ const getRecommendedCourses = (preferences: UserPreferences): Course[] => {
         videoUrl: "",
         ipfsLink: "",
         videoCID: "",
+        certificateTemplate: "",
+        signLanguage: "",
+        specialFeatures: [],
+        subtitles: false,
         isPaid: true,
         duration: "4 hours",
         instructor: "Prof. Time Master",
@@ -1102,7 +1142,7 @@ export default function Home() {
                     <span style={{ opacity: 0.7 }}>🕒</span>
                     {course.duration}
                   </div>
-                  <div style={{
+                  {/* <div style={{
                     background: "linear-gradient(135deg, #7C3AED, #BB86FC)",
                     padding: "8px 16px",
                     borderRadius: "12px",
@@ -1111,7 +1151,7 @@ export default function Home() {
                     fontWeight: "500",
                   }}>
                     {course.level}
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             ))}
