@@ -5,9 +5,9 @@ import { ThemeContext } from "../context/ThemeContext";
 import dynamic from 'next/dynamic';
 import styles from '../styles/ProfileSetup.module.css';
 import Link from "next/link";
-
+import Spline from "@splinetool/react-spline";
 // Dynamically import Spline with no SSR
-const Spline = dynamic(() => import('@splinetool/react-spline').then(mod => mod.default), { ssr: false });
+// const Spline = dynamic(() => import('@splinetool/react-spline').then(mod => mod.default), { ssr: false });
 
 interface Profile {
   displayName: string;
